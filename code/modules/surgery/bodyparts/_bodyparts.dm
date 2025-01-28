@@ -1100,10 +1100,10 @@
 /obj/item/bodypart/proc/get_modified_bleed_rate()
 	var/bleed_rate = cached_bleed_rate
 	if(owner.body_position == LYING_DOWN)
-		bleed_rate *= 0.60
+		bleed_rate *= 0.5 //laying cuts bloodloss by half
 
 	if(HAS_TRAIT(src, TRAIT_BODYPART_GRABBED))
-		bleed_rate *= 0.3
+		bleed_rate *= 0.3 //Apply the pressure!
 
 	if(bandage)
 		bleed_rate *= bandage.absorption_rate_modifier

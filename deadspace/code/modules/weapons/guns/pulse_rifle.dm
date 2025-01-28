@@ -228,7 +228,7 @@ Projectiles effects
 /obj/effect/projectile/pulse/hv
 	icon_state = "muzzle_pulse_hv"
 	light_power = 0.6
-	light_color = COLOR_MARKER_RED
+	light_color = "#ff4444"
 
 /obj/effect/projectile/pulse/df
 	icon_state = "muzzle_pulse_light"

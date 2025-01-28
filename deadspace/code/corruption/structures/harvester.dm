@@ -2,11 +2,13 @@
 
 /obj/structure/necromorph/harvester
 	name = "harvester"
-	icon = 'deadspace/icons/effects/corruption96x96.dmi'
-	icon_state = "whole"
+	icon = 'deadspace/icons/effects/harvester_new.dmi'
+	icon_state = "closed"
 	density = TRUE
-	pixel_x = -32
-	base_pixel_x = -32
+	pixel_x = -16
+	base_pixel_x = -16
+	pixel_y = -8
+	base_pixel_y = -8
 	var/active = FALSE
 	var/biomass_per_tick = 0
 	var/list/controlled_atoms
@@ -15,13 +17,11 @@
 
 /obj/structure/necromorph/harvester/Initialize(mapload, obj/structure/marker/new_master)
 	.=..()
-	AddComponent(/datum/component/seethrough, SEE_THROUGH_MAP_THREE_X_THREE)
+	AddComponent(/datum/component/seethrough, SEE_THROUGH_MAP_DEFAULT_TWO_TALL)
 	if(!new_master)
 		return INITIALIZE_HINT_QDEL
 	marker = new_master
 	controlled_atoms = list()
-	icon_state = "harvester"
-	update_icon(UPDATE_OVERLAYS)
 
 /obj/structure/necromorph/harvester/LateInitialize()
 	..()
@@ -41,26 +41,9 @@
 	marker = null
 	return ..()
 
-/obj/structure/necromorph/harvester/update_overlays()
-	.=..()
-	var/static/our_overlays
-	if (isnull(our_overlays))
-		our_overlays = list(
-			mutable_appearance(icon, "tentacle_1"),
-			mutable_appearance(icon, "tentacle_2"),
-			mutable_appearance(icon, "tentacle_3"),
-			mutable_appearance(icon, "tentacle_4"),
-			mutable_appearance(icon, "beak"),
-			mutable_appearance(icon, "beak_closed"),
-		)
-	if(active)
-		. += our_overlays[1]
-		. += our_overlays[2]
-		. += our_overlays[3]
-		. += our_overlays[4]
-		. += our_overlays[5]
-	else
-		. += our_overlays[6]
+/obj/structure/necromorph/harvester/update_icon_state()
+	icon_state = (active ? "active" : "closed")
+	return ..()
 
 /obj/structure/necromorph/harvester/on_turf_corrupted()
 	..()
@@ -76,7 +59,11 @@
 		REMOVE_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
 		controlled.remove_filter("harvester_glow")
 	controlled_atoms.Cut()
-	update_icon(UPDATE_OVERLAYS)
+	update_icon_state()
+	light_power = 0
+	light_inner_range = 0
+	light_outer_range = 0
+	update_light()
 
 /obj/structure/necromorph/harvester/proc/activate()
 	if(active)
@@ -94,7 +81,12 @@
 				biomass_per_tick += controlled.biomass_produce
 		FOR_DVIEW_END
 		our_source = marker.add_biomass_source(/datum/biomass_source/harvester, src)
-		update_icon(UPDATE_OVERLAYS)
+		update_icon_state()
+		light_power = 0.5
+		light_inner_range = 2
+		light_outer_range = 5
+		light_color = "#bcb10d"
+		update_light()
 
 /obj/structure/necromorph/harvester/proc/on_controlled_delete(atom/movable/controlled, force)
 	SIGNAL_HANDLER

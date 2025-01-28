@@ -14,6 +14,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 16
 	actions = list(
+		/datum/action/innate/sense,
 	)
 	minimap_icon = "infector"
 

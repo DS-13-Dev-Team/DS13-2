@@ -27,7 +27,8 @@
 	return
 
 //This had to be moved from species due to code improvements
-/mob/living/carbon/human/necromorph/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/necromorph/H, forced = FALSE, spread_damage = FALSE, sharpness = NONE, attack_direction = null, attacking_item)
+/mob/living/carbon/human/necromorph/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, forced = FALSE, spread_damage = FALSE, sharpness = NONE, attack_direction = null, attacking_item)
+	var/mob/living/carbon/human/necromorph/H = src
 	if(H.dodge_shield > 0)
 		// Calculate amount of the damage that was blocked by the shield
 		var/dodged_damage = min(H.dodge_shield, damage, damage * (100 - blocked) / 100)

@@ -163,7 +163,6 @@
 
 	var/movable = FALSE
 	use_overlays = FALSE
-	biomass_produce = BIOMASS_HARVEST_MEDIUM
 
 /obj/machinery/portable_atmospherics/scrubber/huge/movable
 	movable = TRUE

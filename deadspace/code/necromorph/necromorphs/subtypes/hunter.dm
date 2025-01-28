@@ -29,7 +29,8 @@
 		return FALSE
 	return FALSE
 
-/mob/living/carbon/human/necromorph/hunter/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/hunter/H, forced, spread_damage, sharpness, attack_direction, attacking_item)
+/mob/living/carbon/human/necromorph/hunter/apply_damage(damage, damagetype, def_zone, blocked, forced, spread_damage, sharpness, attack_direction, attacking_item)
+	var/mob/living/carbon/human/necromorph/hunter/H = src
 	if(H.health - damage <= 0)
 		H.handle_death_check()
 	. = ..()
@@ -51,6 +52,7 @@
 		/datum/action/cooldown/necro/swing/hunter,
 		// /datum/action/cooldown/necro/taunt/hunter,
 		/datum/action/cooldown/necro/regenerate/hunter,
+		/datum/action/innate/sense,
 		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "hunter"

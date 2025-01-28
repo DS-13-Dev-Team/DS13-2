@@ -14,6 +14,8 @@ GLOBAL_LIST_EMPTY(necromorph_markers)
 	base_pixel_x = -33
 	move_resist = MOVE_FORCE_OVERPOWERING
 	density = TRUE
+	///The loopingsound for when marker activates
+	var/datum/looping_sound/marker/soundloop
 	var/active = FALSE
 	///Whether we should use necroqueue when spawning necromorphs
 	var/use_necroqueue = TRUE
@@ -22,6 +24,8 @@ GLOBAL_LIST_EMPTY(necromorph_markers)
 	var/datum/markernet/markernet
 	var/list/marker_signals = list()
 	var/list/necromorphs = list()
+	///checks mobs with clients when marker activates and adds them to a list, used for sense
+	var/list/unwhole = list()
 	/// Biomass stored
 	var/marker_biomass = 0
 	/// Biomass signals can use
@@ -44,3 +48,12 @@ GLOBAL_LIST_EMPTY(necromorph_markers)
 	var/list/corruption_eyes
 	/// When was the last time all signals were alerted by an eye
 	var/last_eye_notify
+
+/datum/looping_sound/marker
+	mid_sounds = 'deadspace/sound/effects/markerthrob.ogg'
+	mid_length = 9.5 SECONDS
+	volume = 50
+	ignore_walls = FALSE
+	extra_range = 20
+	falloff_exponent = 5
+	falloff_distance = 8

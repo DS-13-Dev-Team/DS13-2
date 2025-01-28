@@ -101,6 +101,14 @@
 /datum/species/necromorph/random_name(gender,unique,lastname)
 	return "[name] [rand(1, 999)]"
 
+//The natural healing of the necromorph
+/datum/species/necromorph/spec_life(mob/living/carbon/N, delta_time, times_fired)
+	if(N.stat == DEAD) //Dead necros don't heal
+		return
+	var/turf/my_turf = get_turf(N)
+	if(my_turf.necro_corrupted) //Not standing on corruption? No heals
+		N.heal_overall_damage(0.2 * delta_time, 0 * delta_time, BODYTYPE_ORGANIC)
+
 //Does animations for regenerating a limb
 /datum/species/necromorph/proc/regenerate_limb(mob/living/carbon/human/necromorph/H, limb, duration)
 	var/image/LR = image(initial(H.class.ui_icon), H, "[limb]_regen")

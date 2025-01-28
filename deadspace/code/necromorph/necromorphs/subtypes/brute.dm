@@ -97,7 +97,8 @@
 	stop_curl()
 
 //Switched from species to mob due to code improvements
-/mob/living/carbon/human/necromorph/brute/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/brute/H, forced, spread_damage, sharpness, attack_direction, attacking_item)
+/mob/living/carbon/human/necromorph/brute/apply_damage(damage, damagetype, def_zone, blocked, forced, spread_damage, sharpness, attack_direction, attacking_item)
+	var/mob/living/carbon/human/necromorph/brute/H = src
 	var/reduced = 0
 	switch(turn(attack_direction, dir2angle(H.dir)))
 		if(NORTH)

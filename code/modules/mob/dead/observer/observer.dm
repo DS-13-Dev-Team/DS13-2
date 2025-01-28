@@ -223,6 +223,9 @@ Works together with spawning an observer, noted above.
 		if(!ghost.client?.prefs || ghost.client.prefs.read_preference(/datum/preference/toggle/monochrome_ghost))
 			ghost.add_client_colour(/datum/client_colour/ghostmono)
 
+	if(ismarkereye(usr)) //So signals don't float around if someone ghosts insteads of leaving horde
+		qdel(src)
+
 	return ghost
 
 /mob/living/ghostize(can_reenter_corpse = TRUE, admin_ghost)

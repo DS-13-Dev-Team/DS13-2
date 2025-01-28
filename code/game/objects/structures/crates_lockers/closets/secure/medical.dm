@@ -31,13 +31,14 @@
 		new /obj/item/clothing/mask/muzzle/breath(src)
 
 /obj/structure/closet/secure_closet/medical3
-	name = "'s locker"
+	name = "medical locker"
 	req_access = list(ACCESS_SURGERY)
 	icon_state = "med_secure"
 
 /obj/structure/closet/secure_closet/medical3/PopulateContents()
 	..()
 	new /obj/item/radio/headset/headset_med(src)
+	new /obj/item/healthanalyzer(src)
 	new /obj/item/defibrillator/loaded(src)
 	new /obj/item/clothing/gloves/color/latex/nitrile(src)
 	new /obj/item/storage/belt/medical(src)

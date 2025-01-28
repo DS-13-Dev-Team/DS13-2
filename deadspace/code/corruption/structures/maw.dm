@@ -6,7 +6,7 @@
 	desc = "A disgusting mass of throbbing flesh and gnashing teeth, it looks like something out of a nightmare."
 	desc_controls = "Drag a body onto the maw to begin biomass consumption. Will grab the living if they step on it."
 	icon = 'deadspace/icons/effects/corruption.dmi'
-	icon_state = "maw"
+	icon_state = "maw_new"
 	density = FALSE
 	max_integrity = 30
 	can_buckle = TRUE
@@ -27,7 +27,7 @@
 
 /obj/structure/necromorph/maw/update_icon_state()
 	..()
-	icon_state = length(buckled_mobs) ? "maw_active" : "maw"
+	icon_state = length(buckled_mobs) ? "maw_new_active" : "maw_new"
 
 ///The signal handler that starts the process of grabbing
 /obj/structure/necromorph/maw/proc/maw_grabbing(datum/source, atom/movable/AM)

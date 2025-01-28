@@ -16,7 +16,6 @@
 	var/volume = 0
 	///Used to track if anything of note has happen while running process_atmos()
 	var/excited = TRUE
-	biomass_produce = BIOMASS_HARVEST_SMALL
 
 /obj/machinery/portable_atmospherics/Initialize(mapload)
 	. = ..()

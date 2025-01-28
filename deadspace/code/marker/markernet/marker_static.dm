@@ -23,6 +23,10 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/cameranet_static)
 		update_o(view)
 		RegisterSignal(owner.client, COMSIG_VIEW_SET, PROC_REF(on_view_change))
 
+//The static doesn't need to be used
+/atom/movable/screen/cameranet_static/can_usr_use(mob/user)
+	return FALSE
+
 /atom/movable/screen/cameranet_static/proc/on_view_change(datum/source, new_size)
 	SIGNAL_HANDLER
 	update_o(new_size)

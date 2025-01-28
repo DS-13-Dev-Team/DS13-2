@@ -62,6 +62,7 @@
 	if(necro.stat == DEAD)
 		return //Don't want it generating dodge while dead
 	necro.dodge_pool = min(necro.dodge_pool + (0.6 * delta_time), necro.max_pool)
+	..()
 
 /datum/species/necromorph/twitcher/bullet_act(obj/projectile/P, mob/living/carbon/human/necromorph/twitcher/necro)
 	if(necro.stat == DEAD)

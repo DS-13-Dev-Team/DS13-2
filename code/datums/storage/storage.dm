@@ -723,6 +723,9 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 	if(ismob(over_object))
 		if(over_object != user)
 			return
+		//If we don't check for necros they can get guns through backpack inventories
+		if(isnecromorph(over_object))
+			return
 
 		INVOKE_ASYNC(src, PROC_REF(open_storage), user)
 

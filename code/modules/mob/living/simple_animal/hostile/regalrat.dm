@@ -309,10 +309,6 @@
 /mob/living/simple_animal/hostile/rat/death(gibbed, cause_of_death = "Unknown")
 	if(!ckey)
 		..(TRUE)
-		if(!gibbed)
-			var/obj/item/food/deadmouse/mouse = new(loc)
-			mouse.icon_state = icon_dead
-			mouse.name = name
 	SSmobs.cheeserats -= src // remove rats on death
 	return ..()
 

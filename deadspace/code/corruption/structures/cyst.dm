@@ -23,7 +23,7 @@
 	return ..()
 
 /obj/structure/necromorph/cyst/proc/on_entered(atom/source, mob/living/carbon/human/arrived)
-	if(!ready || isnecromorph(arrived) || isprojectile(arrived))
+	if(!ready || isnecromorph(arrived) || isprojectile(arrived) || !arrived.stat == CONSCIOUS)
 		return
 	var/angle = SIMPLIFY_DEGREES(get_angle(src, arrived) - dir2angle(src.dir))
 	if(angle > CYST_SHOOT_ANGLE*0.5)

@@ -7,9 +7,6 @@
 #define COLOR_BLOOD_HUMAN      "#a10808"
 #define COLOR_BLOOD_NECRO      "#583001"
 
-#define COLOR_NECRO_YELLOW		 "#ffff00"
-#define COLOR_NECRO_DARK_YELLOW 	 "#aaaa00"
-#define COLOR_MARKER_RED		      "#ff4444"
 #define COLOR_HARVESTER_RED		 rgb(255, 68, 68, 128)
 #define COLOR_BIOMASS_GREEN		 "#82bf26"
 #define COLOR_BIOLUMINESCENT_ORANGE "#ffb347"

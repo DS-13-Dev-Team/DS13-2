@@ -9,6 +9,10 @@
 	base_pixel_x = -16
 	pixel_y = -16
 	base_pixel_y = -16
+	light_power = 0.5
+	light_inner_range = 1
+	light_outer_range = 3
+	light_color = "#bcb10d"
 	///Type, not a reference
 	var/datum/necro_class/spawning_necromorph
 	var/biomass_spent = 0
@@ -69,7 +73,7 @@
 			to_chat(user, span_notice("Wait [timeleft(timer_id)/(1 SECONDS)] seconds before the nest produces [initial(spawning_necromorph.display_name)]"))
 			return
 		if(tgui_alert(user, "Are you sure you want to possess [initial(spawning_necromorph.display_name)]", "Nest", list("Yes", "No")) == "Yes")
-			if(QDELING(src) || available_necromorphs == 0)
+			if(QDELING(src) || available_necromorphs <= 0)
 				return
 			var/type_to_spawn = initial(spawning_necromorph.necromorph_type_path)
 			available_necromorphs--
