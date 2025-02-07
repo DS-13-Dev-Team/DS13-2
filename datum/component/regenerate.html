@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;component&#x2F;regenerate - Daedalus Dock</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Daedalus Dock</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/component/regenerate.html#var">Var Details</a></header>
+<main>
+<h1>regenerate <aside>/<a href="datum.html">datum</a>/<a href="datum/component.html">component</a>/<a href="datum/component/regenerate.html">regenerate</a></aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/datums/components/regenerate.dm#L3">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;datums&#x2F;components&#x2F;regenerate.dm 3"/></a></h1>
+
+<p>If you have ideas how to implement without constantly creating/deleting component while still being able to change
+parameters and allow necromorphs and signals to regenerate necromorphs wihout duplicating code. Please implement it that way.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/component/regenerate.html#var/biomass_lasting_damage_cost">biomass_lasting_damage_cost</a></th><td>When lasting_damage is healed, the marker transfers biomass to the mob, equal to the damage healed * this value</td></tr>
+            <tr><th><a href="datum/component/regenerate.html#var/burn_heal_mult">burn_heal_mult</a></th><td>When healing burn damage, each point of heal_amount can heal this many points of actual burn damage</td></tr>
+            <tr><th><a href="datum/component/regenerate.html#var/heal_amount">heal_amount</a></th><td>How much health is restored</td></tr>
+            <tr><th><a href="datum/component/regenerate.html#var/heal_per_second">heal_per_second</a></th><td>Amount of heal per second</td></tr>
+            <tr><th><a href="datum/component/regenerate.html#var/last_shake">last_shake</a></th><td>Time since last shake</td></tr>
+            <tr><th><a href="datum/component/regenerate.html#var/lasting_damage_heal">lasting_damage_heal</a></th><td>How much lasting damage is healed</td></tr>
+            <tr><th><a href="datum/component/regenerate.html#var/limb_lasting_damage">limb_lasting_damage</a></th><td>When a limb is replaced, the mob suffers lasting damage equal to the limb's health * this value</td></tr>
+            <tr><th><a href="datum/component/regenerate.html#var/max_limbs">max_limbs</a></th><td>How many limbs can be regenerated per use</td></tr>
+            <tr><th><a href="datum/component/regenerate.html#var/regenerating_limbs">regenerating_limbs</a></th><td>List of limbs to regenerate</td></tr>
+            <tr><th><a href="datum/component/regenerate.html#var/shake_interval">shake_interval</a></th><td>Interval between shaking necromorph</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/biomass_lasting_damage_cost"><aside class="declaration">var </aside>biomass_lasting_damage_cost
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/datums/components/regenerate.dm#L14">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;datums&#x2F;components&#x2F;regenerate.dm 14"/></a></h3>
+        <p>When lasting_damage is healed, the marker transfers biomass to the mob, equal to the damage healed * this value</p><h3 id="var/burn_heal_mult"><aside class="declaration">var </aside>burn_heal_mult
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/datums/components/regenerate.dm#L16">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;datums&#x2F;components&#x2F;regenerate.dm 16"/></a></h3>
+        <p>When healing burn damage, each point of heal_amount can heal this many points of actual burn damage</p><h3 id="var/heal_amount"><aside class="declaration">var </aside>heal_amount
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/datums/components/regenerate.dm#L8">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;datums&#x2F;components&#x2F;regenerate.dm 8"/></a></h3>
+        <p>How much health is restored</p><h3 id="var/heal_per_second"><aside class="declaration">var </aside>heal_per_second
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/datums/components/regenerate.dm#L21">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;datums&#x2F;components&#x2F;regenerate.dm 21"/></a></h3>
+        <p>Amount of heal per second</p><h3 id="var/last_shake"><aside class="declaration">var </aside>last_shake
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/datums/components/regenerate.dm#L23">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;datums&#x2F;components&#x2F;regenerate.dm 23"/></a></h3>
+        <p>Time since last shake</p><h3 id="var/lasting_damage_heal"><aside class="declaration">var </aside>lasting_damage_heal
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/datums/components/regenerate.dm#L10">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;datums&#x2F;components&#x2F;regenerate.dm 10"/></a></h3>
+        <p>How much lasting damage is healed</p><h3 id="var/limb_lasting_damage"><aside class="declaration">var </aside>limb_lasting_damage
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/datums/components/regenerate.dm#L12">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;datums&#x2F;components&#x2F;regenerate.dm 12"/></a></h3>
+        <p>When a limb is replaced, the mob suffers lasting damage equal to the limb's health * this value</p><h3 id="var/max_limbs"><aside class="declaration">var </aside>max_limbs
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/datums/components/regenerate.dm#L6">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;datums&#x2F;components&#x2F;regenerate.dm 6"/></a></h3>
+        <p>How many limbs can be regenerated per use</p><h3 id="var/regenerating_limbs"><aside class="declaration">var </aside>regenerating_limbs
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/datums/components/regenerate.dm#L27">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;datums&#x2F;components&#x2F;regenerate.dm 27"/></a></h3>
+        <p>List of limbs to regenerate</p><h3 id="var/shake_interval"><aside class="declaration">var </aside>shake_interval
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/datums/components/regenerate.dm#L18">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;datums&#x2F;components&#x2F;regenerate.dm 18"/></a></h3>
+        <p>Interval between shaking necromorph</p></main>
+<footer>
+    daedalus.dme
+    <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/tree/d651b38b58f94cb7d54d0690a9a9d39fe9109a48">d651b38</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;necromorph - Daedalus Dock</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Daedalus Dock</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="mob/living/carbon/human/necromorph.html#var">Var Details</a> - <a href="mob/living/carbon/human/necromorph.html#proc">Proc Details</a></header>
+<main>
+<h1>necromorph <aside>/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/<a href="mob/living/carbon/human/necromorph.html">necromorph</a></aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L1">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#var/armour_penetration">armour_penetration</a></th><td>How good are we at penetrating armour</td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#var/charging">charging</a></th><td>Wether this necromorph is charging at the moment</td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#var/class">class</a></th><td>Necromorph class type we are using, shouldn't be a ref
+Use marker?.necro_classes[class].your_var||initial(class.your_var) if you need to get a var</td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#var/conscious_see_in_dark">conscious_see_in_dark</a></th><td>see_in_dark value while consicious</td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#var/controlling">controlling</a></th><td>Signal controlling this necromorph at the moment</td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#var/dodge_shield">dodge_shield</a></th><td>&quot;Shield&quot; that appears after dodging. Absorbs incom</td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#var/marker_chosen_lead">marker_chosen_lead</a></th><td>whether the necromorph has been selected by the marker as a leader.</td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#var/necro_flags">necro_flags</a></th><td>bitwise flags denoting things a necromorph can and cannot do, or things a necromorph is or is not. uses defines.</td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#var/necro_mobhud">necro_mobhud</a></th><td>whether the necromorph mobhud is activated or not.</td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#var/recent_notice">recent_notice</a></th><td>Notification spam controls</td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#var/searching">searching</a></th><td>is the necromorph using sense?</td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#var/sense_target">sense_target</a></th><td>The mob the necromorph is targeting with sense</td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#var/tracked">tracked</a></th><td>The necromorph currently tracked by the necro_tracker arrow</td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#var/unconscious_see_in_dark">unconscious_see_in_dark</a></th><td>see_in_dark value while unconscious</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="mob/living/carbon/human/necromorph.html#proc/handle_death_check">handle_death_check</a></th><td>Check if the necromorph should die</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/armour_penetration"><aside class="declaration">var </aside>armour_penetration
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L74">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 74"/></a></h3>
+        <p>How good are we at penetrating armour</p><h3 id="var/charging"><aside class="declaration">var </aside>charging
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L71">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 71"/></a></h3>
+        <p>Wether this necromorph is charging at the moment</p><h3 id="var/class"><aside class="declaration">var </aside>class
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/necro_class.html">necro_class</a></aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L37">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 37"/></a></h3>
+        <p>Necromorph class type we are using, shouldn't be a ref
+Use marker?.necro_classes[class].your_var||initial(class.your_var) if you need to get a var</p><h3 id="var/conscious_see_in_dark"><aside class="declaration">var </aside>conscious_see_in_dark
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L63">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 63"/></a></h3>
+        <p>see_in_dark value while consicious</p><h3 id="var/controlling"><aside class="declaration">var </aside>controlling
+            <aside>&ndash; /<a href="mob.html">mob</a>/camera/marker_signal</aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L80">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 80"/></a></h3>
+        <p>Signal controlling this necromorph at the moment</p><h3 id="var/dodge_shield"><aside class="declaration">var </aside>dodge_shield
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L33">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 33"/></a></h3>
+        <p>&quot;Shield&quot; that appears after dodging. Absorbs incom</p><h3 id="var/marker_chosen_lead"><aside class="declaration">var </aside>marker_chosen_lead
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L47">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 47"/></a></h3>
+        <p>whether the necromorph has been selected by the marker as a leader.</p><h3 id="var/necro_flags"><aside class="declaration">var </aside>necro_flags
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L68">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 68"/></a></h3>
+        <p>bitwise flags denoting things a necromorph can and cannot do, or things a necromorph is or is not. uses defines.</p><h3 id="var/necro_mobhud"><aside class="declaration">var </aside>necro_mobhud
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L44">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 44"/></a></h3>
+        <p>whether the necromorph mobhud is activated or not.</p><h3 id="var/recent_notice"><aside class="declaration">var </aside>recent_notice
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L56">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 56"/></a></h3>
+        <p>Notification spam controls</p><h3 id="var/searching"><aside class="declaration">var </aside>searching
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L50">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 50"/></a></h3>
+        <p>is the necromorph using sense?</p><h3 id="var/sense_target"><aside class="declaration">var </aside>sense_target
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L53">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 53"/></a></h3>
+        <p>The mob the necromorph is targeting with sense</p><h3 id="var/tracked"><aside class="declaration">var </aside>tracked
+            <aside>&ndash; /<a href="atom.html">atom</a></aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L60">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 60"/></a></h3>
+        <p>The necromorph currently tracked by the necro_tracker arrow</p><h3 id="var/unconscious_see_in_dark"><aside class="declaration">var </aside>unconscious_see_in_dark
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necro_defines.dm#L65">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necro_defines.dm 65"/></a></h3>
+        <p>see_in_dark value while unconscious</p><h2 id="proc">Proc Details</h2><h3 id="proc/handle_death_check"><aside class="declaration">proc </aside>handle_death_check<aside>() 
+        
+    
+            <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/blob/d651b38b58f94cb7d54d0690a9a9d39fe9109a48/deadspace/code/necromorph/necromorphs/necromorph.dm#L140">
+        <img src="git.png" width="16" height="16" title="deadspace&#x2F;code&#x2F;necromorph&#x2F;necromorphs&#x2F;necromorph.dm 140"/></a></aside>
+        </h3>
+        <p>Check if the necromorph should die</p></main>
+<footer>
+    daedalus.dme
+    <a href="https://github.com/DS-13-Dev-Team/DS13-2.0/tree/d651b38b58f94cb7d54d0690a9a9d39fe9109a48">d651b38</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>
